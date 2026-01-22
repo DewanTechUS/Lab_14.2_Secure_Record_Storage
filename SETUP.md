@@ -1,7 +1,6 @@
 # Project Setup & JWT Secret Generation
 
 ## Initialize Project
-git init
 npm init -y
 
 ## Install Dependencies
