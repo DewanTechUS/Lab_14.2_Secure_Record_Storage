@@ -70,7 +70,7 @@ All note routes require a valid JWT token:
 POST
 
 http://localhost:3000/api/users/register
-Body → raw → JSON
+- Body => raw => JSON
 
 {
 "username": "user1",
