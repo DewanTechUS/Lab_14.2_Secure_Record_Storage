@@ -66,7 +66,7 @@ All note routes require a valid JWT token:
 
 ## How to Test Using Postman 
 
-1. Step 1 - Register a User
+### Step 1 - Register a User
 POST
 
 http://localhost:3000/api/users/register
@@ -78,9 +78,9 @@ Body → raw → JSON
 "password": "password123"
 }
 - The response will include a token.
-- Copy the token — it is required for all note requests.
+- Copy the token - it is required for all note requests.
 
-2. Step 2 - Add Bearer Token in Postman
+### Step 2 - Add Bearer Token in Postman
 For every request to /api/notes:
 
 Open the request in Postman
@@ -97,7 +97,7 @@ Postman will automatically create this header:
 
 Authorization: Bearer YOUR_TOKEN_HERE
 
-3. Step 3 - Create a Note
+### Step 3 - Create a Note
 POST
 
 http://localhost:3000/api/notes
@@ -108,7 +108,7 @@ Type: Bearer Token
 
 Token: (paste token)
 
-Body → raw → JSON
+Body => raw => JSON
 
 {
 "title": "My First Note",
@@ -116,7 +116,7 @@ Body → raw → JSON
 }
  - Status: 201 Created
 
-4. Step 4 — Get Your Notes
+### Step 4 - Get Your Notes
 GET
 
 http://localhost:3000/api/notes
@@ -126,7 +126,7 @@ Bearer Token required
 
 - Returns only notes owned by the logged-in user.
 
-5. Step 5 — Update a Note (Owner Only)
+### Step 5 - Update a Note (Owner Only)
 PUT
 
 http://localhost:3000/api/notes/NOTE_ID_HERE
@@ -134,7 +134,7 @@ Authorization:
 
 Bearer Token required
 
-Body → raw → JSON
+Body => raw => JSON
 
 {
 "title": "Updated Title",
@@ -180,4 +180,3 @@ This lab provided valuable hands-on experience with real-world backend security 
 - I also struggled initially with passing JWT tokens correctly in Postman. Learning how to use the Authorization → Bearer Token option helped me understand how middleware extracts and validates tokens for protected routes.
 
 - Overall, this lab strengthened my understanding of secure API development, user-specific data protection, and the importance of authorization checks in backend applications.
-
